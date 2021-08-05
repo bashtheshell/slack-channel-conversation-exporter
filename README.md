@@ -1,2 +1,5 @@
-# slack-channel-conversation-exporter
-Export a CSV file containing the last 12 months of conversations from a single private or public Slack channel
+Slack Channel Conversation Exporter
+---
+
+The purpose of the `conversation_exporter.py` Python script is to employ the Slack [SDK WebClient API](https://slack.dev/python-slack-sdk/api-docs/slack_sdk/web/client.html) to retrieve all messages, including threaded messages, from either a public or private channel using Bot app.
+
