@@ -23,7 +23,7 @@ How to Run Slack Channel Conversation Exporter
 	
 	The filename is formatted as followed:
 	
-	`channel_name_CHANNEL_CONVO_01_01_2021_23:59:59_PDT.csv`
+	`channel_name_CHANNEL_CONVO_01_01_2021_23.59.59_PDT.csv`
 
 
 4. If not successful, go to the Apple icon in the top-left corner to access the menu. 

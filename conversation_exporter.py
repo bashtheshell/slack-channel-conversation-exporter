@@ -282,7 +282,7 @@ if __name__ == "__main__":
     last_pagination = False
     new_cursor = ""
 
-    filename = f"{designated_channel}_CHANNEL_CONVO_" + datetime.datetime.fromtimestamp(float(current_timestamp), tz=pytz.timezone(preferred_timezone)).strftime('%m_%d_%Y_%H:%M:%S_%Z')
+    filename = f"{designated_channel}_CHANNEL_CONVO_" + datetime.datetime.fromtimestamp(float(current_timestamp), tz=pytz.timezone(preferred_timezone)).strftime('%m_%d_%Y_%H.%M.%S_%Z')
 
     with open(f"{os.path.expanduser('~')}/Desktop/{filename}.csv", mode='w', encoding='utf-8', newline='') as file:
         writer = csv.writer(file)
