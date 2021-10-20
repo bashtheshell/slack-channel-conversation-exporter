@@ -233,8 +233,12 @@ def get_message_attachment(message_dict):
             # Attachment is no longer available - may be deleted by user
             return "[ ATTACHMENT NO LONGER AVAILABLE ]"
     elif 'bot_profile' in local_message_dict.keys() and local_message_dict['bot_profile']['name'] == 'giphy':
-        # Return the GIPHY GIF image URL
-        return local_message_dict['blocks'][0]['image_url']
+        if local_message_dict['blocks'][0]['type'] == 'image':
+            # Return the GIPHY GIF image URL if message is unadulterated
+            return local_message_dict['blocks'][0]['image_url']
+        elif local_message_dict['blocks'][0]['type'] == 'rich_text':
+            # Otherwise return the modified message made to the GIPHY GIF post
+            return local_message_dict['blocks'][0]['elements'][0]['elements'][0]['text']
     else:
         return ""
 
